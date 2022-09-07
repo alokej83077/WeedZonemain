@@ -155,11 +155,11 @@ def get_progress_bar_string(status):
 
 def get_readable_message():
     with download_dict_lock:
-        msg = f"\nBOT OF DEXTER\n\n"
+        msg = f"\n<b>BOT OF DEXTER</b>\n\n"
         if STATUS_LIMIT is not None:
             tasks = len(download_dict)
             global pages
-            pages = ceil(tasks/STATUS_LIMIT)
+            pages = ceil(Active/STATUS_LIMIT)
             if PAGE_NO > pages and pages != 0:
                 globals()['COUNT'] -= STATUS_LIMIT
                 globals()['PAGE_NO'] -= 1
@@ -298,7 +298,12 @@ def get_readable_message():
             button = InlineKeyboardMarkup(buttons.build_menu(3))
             return msg + bmsg, button
         return msg + bmsg, sbutton
+       if PICS:
+            sendPhoto(start_string, context.bot, update.message, random.choice(PICS), reply_markup)
+        else:
+            sendMarkup(start_string, context.bot, update.message, reply_markup
 
+    
 def turn(data):
     try:
         with download_dict_lock:
