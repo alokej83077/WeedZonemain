@@ -169,16 +169,23 @@ def stats(update, context):
                     f'<b>╰ 🔻 Download Data:</b> {recv}\n\n'
 
     else:
-            stats = f'<b>╭─《 BOT STATISTICS 》</b>\n' \
-                    f'<b>├  Updated On: </b>{last_commit}\n'\
-                    f'<b>├  Uptime: </b>{currentTime}\n'\
-                    f'<b>├  OS Uptime: </b>{osUptime}\n'\
-                    f'<b>├  CPU usage:</b> [{progress_bar(cpuUsage)}] {cpuUsage}%\n'\
-                    f'<b>├  RAM:</b> [{progress_bar(mem_p)}] {mem_p}%\n'\
-                    f'<b>├  Disk:</b> [{progress_bar(disk)}] {disk}%\n'\
-                    f'<b>├  Disk Free:</b> {free}\n'\
-                    f'<b>├  Upload Data:</b> {sent}\n'\
-                    f'<b>╰  Download Data:</b> {recv}\n\n'
+            stats = f'<b>Commit Date:</b> {last_commit}\n\n'\
+                    f'<b>Bot Version:</b> v22.08.2067\n'\
+                    f'<b>Bot Uptime:</b> {currentTime}\n'\
+                    f'<b>OS Uptime:</b> {osUptime}\n\n'\
+                    f'<b>Disk Space:</b> {total}\n'\
+                    f'<b>Used:</b> {used} | <b>Free:</b> {free}\n\n'\
+                    f'<b>Upload:</b> {sent}\n'\
+                    f'<b>Download:</b> {recv}\n\n'\
+                    f'<b>CPU:</b> {cpuUsage}%\n'\
+                    f'<b>RAM:</b> {mem_p}%\n'\
+                    f'<b>DISK:</b> {disk}%\n\n'\
+                    f'<b>Physical Cores:</b> {p_core}\n'\
+                    f'<b>Total Cores:</b> {t_core}\n\n'\
+                    f'<b>Swap:</b> {swap_t} | <b>Used:</b> {swap_p}%\n'\
+                    f'<b>Memory Total:</b> {mem_t}\n'\
+                    f'<b>Memory Free:</b> {mem_a}\n'\
+                    f'<b>Memory Used:</b> {mem_u}\n'
 
 
 
@@ -223,14 +230,14 @@ def stats(update, context):
                      f'<b>├ 💣 Total Tasks: </b>{total_task}\n'\
                      f'<b>╰ 🔫 User Tasks: </b>{user_task}\n\n'
         else: 
-            stats += f'<b>╭─《  BOT LIMITS  》</b>\n'\
-                     f'<b>├  Torrent/Direct: </b>{torrent_direct}\n'\
-                     f'<b>├  Zip/Unzip: </b>{zip_unzip}\n'\
-                     f'<b>├  Leech: </b>{leech_limit}\n'\
-                     f'<b>├  Clone: </b>{clone_limit}\n'\
-                     f'<b>├  Mega: </b>{mega_limit}\n'\
-                     f'<b>├  Total Tasks: </b>{total_task}\n'\
-                     f'<b>╰  User Tasks: </b>{user_task}\n\n'
+            stats += f'<b>《  BOT LIMITS  》</b>\n'\
+                     f'<b>Torrent/Direct: </b>{torrent_direct}\n'\
+                     f'<b>Zip/Unzip: </b>{zip_unzip}\n'\
+                     f'<b>Leech: </b>{leech_limit}\n'\
+                     f'<b>Clone: </b>{clone_limit}\n'\
+                     f'<b>Mega: </b>{mega_limit}\n'\
+                     f'<b>Total Tasks: </b>{total_task}\n'\
+                     f'<b>User Tasks: </b>{user_task}\n\n'
 
                 
 
