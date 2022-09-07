@@ -296,13 +296,14 @@ def get_readable_message():
                 buttons.sbutton("Refresh", "status refresh")
                 buttons.sbutton("Close", "status close")
             button = InlineKeyboardMarkup(buttons.build_menu(3))
-            return msg + bmsg, button
-        return msg + bmsg, sbutton
        if PICS:
             sendPhoto(start_string, context.bot, update.message, random.choice(PICS), reply_markup)
         else:
             sendMarkup(start_string, context.bot, update.message, reply_markup
-
+      return msg + bmsg, button
+    return msg + bmsg, sbutton
+                       
+                       
     
 def turn(data):
     try:
